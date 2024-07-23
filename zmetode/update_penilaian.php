@@ -51,11 +51,11 @@ if (isset($_GET['idd']) && isset($_GET['idk'])) {
         <body>
             <div class="container mt-5">
                 <div class="card">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header bg-dark text-white">
                         <strong>Update Perangkingan</strong>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="" method="post" onsubmit="calculateValue()">
                             <input type="hidden" name="iddaftar" value="<?= htmlspecialchars($perangkingan->iddaftar) ?>">
                             <input type="hidden" name="idk" value="<?= htmlspecialchars($perangkingan->idk) ?>">
 
@@ -73,6 +73,13 @@ if (isset($_GET['idd']) && isset($_GET['idk'])) {
                                     </select>
                                 </div>
                             <?php
+                            } elseif ($perangkingan->idk == 32) {
+                            ?>
+                                <div class="form-group">
+                                    <label for="value">Nilai:</label>
+                                    <input type="text" class="form-control" name="value" value="<?= htmlspecialchars($perangkingan->value) ?>">
+                                </div>
+                            <?php
                             } elseif ($perangkingan->idk == 33) {
                             ?>
                                 <div class="form-group">
@@ -86,6 +93,7 @@ if (isset($_GET['idd']) && isset($_GET['idk'])) {
                                     </select>
                                 </div>
                             <?php
+
                             } elseif ($perangkingan->idk == 34) {
                             ?>
                                 <div class="form-group">
@@ -128,7 +136,7 @@ if (isset($_GET['idd']) && isset($_GET['idk'])) {
                             <?php
                             }
                             ?>
-                            <button type="submit" name="update" class="btn btn-primary">Simpan Perubahan</button>
+                            <button type="submit" name="update" class="btn btn-dark">Simpan Perubahan</button>
                         </form>
                     </div>
                 </div>
@@ -137,6 +145,20 @@ if (isset($_GET['idd']) && isset($_GET['idk'])) {
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            <script>
+                function calculateValue() {
+                    const valueInput = document.querySelector('input[name="value"]');
+                    let value = valueInput.value;
+                    const multiplicationPattern = /^(\d+)\s*x\s*(\d+)$/i;
+
+                    if (multiplicationPattern.test(value)) {
+                        const matches = value.match(multiplicationPattern);
+                        const result = parseInt(matches[1]) * parseInt(matches[2]);
+                        valueInput.value = result;
+                    }
+                }
+            </script>
         </body>
 
         </html>

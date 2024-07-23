@@ -38,11 +38,11 @@ while ($row_decision_matrix = $data_decision_matrix->fetch_object()) {
 ?>
 
 <div class="card">
-    <div class="card-header bg-success text-white border-dark">
+    <div class="card-header bg-dark text-white border-dark">
         <strong>Data Pendaftaran SAW</strong>
     </div>
     <div class="card-body">
-        <a class="btn btn-success mb-2" href="?page=pendaftaran&action=tambah">Tambah</a>
+        <a class="btn btn-dark mb-2" href="?page=pendaftaran&action=tambah">Tambah</a>
         <table class="table table-bordered table-striped" id="myTable">
             <thead>
                 <tr>
@@ -61,9 +61,10 @@ while ($row_decision_matrix = $data_decision_matrix->fetch_object()) {
                         <td><?= isset($alternatives[$iddaftar]) ? $alternatives[$iddaftar] : ''; ?></td>
                         <?php foreach ($criteria_values as $idk => $value) : ?>
                             <td>
-                                <?= $value ?>
+                                <span class="text-black"><?= $value ?></span>
+
                                 <a href="?page=penilaian_saw&action=update&idd=<?= $iddaftar ?>&idk=<?= $idk ?>" class="ml-2">
-                                    <span class="fas fa-edit"></span>
+                                    <span class="fas fa-edit text-dark"></span>
                                 </a>
                             </td>
                         <?php endforeach; ?>

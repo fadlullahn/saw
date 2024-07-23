@@ -33,7 +33,7 @@ include 'model_lokasi.php';
             <div class="col-md-6">
                 <form action="" id="signupForm" class="card-form">
                     <div class="card border-dark">
-                        <div class="card-header bg-success text-white border-dark">
+                        <div class="card-header bg-dark text-white border-dark">
                             <strong>Input Data Lokasi</strong>
                         </div>
                         <div class="card-body">
@@ -49,7 +49,7 @@ include 'model_lokasi.php';
                                 <label for="lokasi">Nama Lokasi</label>
                                 <input type="text" class="form-control" id="lokasi" name="lokasi" placeholder="Nama Lokasi" required>
                             </div>
-                            <input class="btn btn-success" type="submit" value="Simpan">
+                            <input class="btn btn-dark" type="submit" value="Simpan">
                         </div>
                     </div>
                 </form>

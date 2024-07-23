@@ -80,7 +80,7 @@ if (isset($_POST['proses_perhitungan'])) {
         <div class="card-body">
             <p>Silakan klik tombol di bawah ini untuk memulai proses perangkingan menggunakan metode SAW.</p>
             <form class="" action="" method="POST">
-                <input type="submit" name="proses_perhitungan" value="Perangkingan" class="btn btn-primary">
+                <input type="submit" name="proses_perhitungan" value="Perangkingan" class="btn btn-dark">
             </form>
         </div>
     </div>
@@ -89,7 +89,7 @@ if (isset($_POST['proses_perhitungan'])) {
 <!-- Matriks Keputusan -->
 <div class="container mt-4">
     <div class="card">
-        <div class="card-header bg-success text-white border-dark">
+        <div class="card-header bg-dark text-white border-dark">
             <div class="toggle-button" onclick="toggleTable('matrikstableContainer')">
                 <span id="matrikstoggleIcon">&#9660;</span> <span id="matrikstoggleText">Matriks Keputusan (X):</span>
             </div>
@@ -125,7 +125,7 @@ if (isset($_POST['proses_perhitungan'])) {
     <!-- Matriks Normalisasi -->
     <div class="container mt-4">
         <div class="card">
-            <div class="card-header bg-success text-white border-dark">
+            <div class="card-header bg-dark text-white border-dark">
                 <div class="toggle-button" onclick="toggleTable('normalizedTable')">
                     <span id="normalizedToggleIcon">&#9660;</span> <span id="normalizedToggleText">Matriks Normalisasi (R):</span>
                 </div>
@@ -162,7 +162,7 @@ if (isset($_POST['proses_perhitungan'])) {
     <!-- Nilai Preferensi -->
     <div class="container mt-4">
         <div class="card">
-            <div class="card-header bg-success text-white border-dark">
+            <div class="card-header bg-dark text-white border-dark">
                 <div class="toggle-button" onclick="toggleTable('preferenceTable')">
                     <span id="preferenceToggleIcon">&#9660;</span> <span id="preferenceToggleText">Nilai Preferensi (P):</span>
                 </div>

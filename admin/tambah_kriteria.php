@@ -37,8 +37,8 @@ if (isset($_POST['simpan'])) {
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card border-dark">
-                <div class="card-header bg-success text-white">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-dark text-white">
                     <strong>Input Data Kriteria</strong>
                 </div>
                 <div class="card-body">
@@ -74,7 +74,7 @@ if (isset($_POST['simpan'])) {
                             <input type="text" class="form-control" name="nilai_min" required>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <input class="btn btn-primary" type="submit" name="simpan" value="Simpan">
+                            <input class="btn btn-dark" type="submit" name="simpan" value="Simpan">
                             <a class="btn btn-danger" href="?page=kriteria">Batal</a>
                         </div>
                     </form>
@@ -84,8 +84,58 @@ if (isset($_POST['simpan'])) {
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#myTable').dataTable();
+        $('#myTable').DataTable();
     });
 </script>
+
+<style>
+    /* Custom Card Styles */
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-header {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn {
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border: none;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .alert {
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .alert .close {
+        line-height: 1.5;
+    }
+</style>

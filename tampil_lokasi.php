@@ -1,9 +1,9 @@
 <div class="card">
-    <div class="card-header bg-success text-white border-dark">
+    <div class="card-header bg-dark text-white border-dark">
         <strong>Data Lokasi</strong>
     </div>
     <div class="card-body">
-        <a class="btn btn-success mb-2" href="?page=lokasi&action=tambah">Tambah</a>
+        <a class="btn btn-dark mb-2" href="?page=lokasi&action=tambah">Tambah</a>
         <div class="table-responsive">
             <table class="table table-bordered" id="lokasiTable">
                 <thead class="thead-dark">

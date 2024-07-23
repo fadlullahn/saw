@@ -29,7 +29,7 @@ $row = $result->fetch_assoc();
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card border-dark">
-                <div class="card-header bg-success text-white">
+                <div class="card-header bg-dark text-white">
                     <strong>Update Data Kriteria</strong>
                 </div>
                 <div class="card-body">
@@ -71,7 +71,7 @@ $row = $result->fetch_assoc();
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <input class="btn btn-success" type="submit" name="update" value="Update">
+                            <input class="btn btn-dark" type="submit" name="update" value="Update">
                             <a class="btn btn-danger" href="?page=kriteria">Batal</a>
                         </div>
                     </form>

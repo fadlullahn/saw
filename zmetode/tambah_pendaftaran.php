@@ -86,7 +86,7 @@ if (isset($_POST['simpan'])) {
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header bg-success text-white">
+            <div class="card-header bg-dark text-white">
                 <strong>Form Pendaftaran</strong>
             </div>
             <div class="card-body">
@@ -101,7 +101,7 @@ if (isset($_POST['simpan'])) {
                             ?>
                         </select>
                     </div>
-                    <button type="submit" name="simpan" class="btn btn-success">Simpan</button>
+                    <button type="submit" name="simpan" class="btn btn-dark">Simpan</button>
                 </form>
             </div>
         </div>
