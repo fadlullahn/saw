@@ -59,7 +59,7 @@ $conn->close();
             <div class="col-lg-4 offset-lg-4">
                 <form method="POST">
                     <div class="card border-dark">
-                        <div class="card-header bg-info text-light border-dark">
+                        <div class="card-header bg-dark text-light border-dark">
                             <strong>LOGIN</strong>
                         </div>
                         <div class="card-body border">
@@ -71,7 +71,7 @@ $conn->close();
                                 <label for="">Password</label>
                                 <input type="password" class="form-control" name="pass" autocomplete="off" required>
                             </div>
-                            <input type="submit" class="btn btn-primary" name="submit" value="Login">
+                            <input type="submit" class="btn btn-dark" name="submit" value="Login">
                         </div>
                     </div>
                 </form>
